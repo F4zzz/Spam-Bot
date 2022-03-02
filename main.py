@@ -1,8 +1,7 @@
-# Usando o arquivo txt para enviar as menssagens:
-
-import pyautogui, time
-time.sleep(4)
+import pyautogui, time, keyboard
+time.sleep(3)
 txt = open("txt", 'r')
 for word in txt:
-    pyautogui.typewrite(word)
-    pyautogui.press("enter")
+    while keyboard.is_pressed('2') == False:
+        pyautogui.typewrite(word)
+        pyautogui.press("enter")
